@@ -1,0 +1,677 @@
+Classic Timing Analyzer report for top
+Sun Nov 14 14:49:11 2021
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk20mhz'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                        ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                                ; To                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 0.545 ns                         ; f                                                                                   ; xuanqu:U5|count2[0]     ; --         ; clk20mhz ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.868 ns                         ; shukongfenpin:U4|co2                                                                ; co3                     ; clk20mhz   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 4.009 ns                         ; a[0]                                                                                ; xuanqu:U5|add[1]        ; --         ; clk20mhz ; 0            ;
+; Clock Setup: 'clk20mhz'      ; N/A   ; None          ; 66.92 MHz ( period = 14.943 ns ) ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[11] ; clk20mhz   ; clk20mhz ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                     ;                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------------------------------------------------------------------------+-------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C5T144C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk20mhz        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-6 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk20mhz'                                                                                                                                                                                                                                                                                                       ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                                ; To                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[14]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[13]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[6]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[5]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[12]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[9]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[15]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[3]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[7]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[2]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[0]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[1]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[8]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[4]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[10]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 66.92 MHz ( period = 14.943 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|q1[11]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.611 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[14]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[13]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[6]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[5]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[12]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[9]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[15]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[3]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[7]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[2]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[0]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[1]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[8]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[4]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[10]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.25 MHz ( period = 14.869 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|q1[11]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.537 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[14]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[13]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[6]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[5]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[12]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[9]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[15]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[3]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[7]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[2]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[0]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[1]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[8]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[4]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[10]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 67.28 MHz ( period = 14.863 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|q1[11]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.531 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[14]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[13]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[6]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[5]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[12]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[9]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[15]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[3]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[7]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[2]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[0]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[1]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[8]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[4]      ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[10]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 68.04 MHz ( period = 14.697 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|q1[11]     ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.365 ns                ;
+; N/A                                     ; 77.24 MHz ( period = 12.946 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1] ; shukongfenpin:U4|co1        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.595 ns                ;
+; N/A                                     ; 77.69 MHz ( period = 12.872 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[3] ; shukongfenpin:U4|co1        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.521 ns                ;
+; N/A                                     ; 77.72 MHz ( period = 12.866 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[2] ; shukongfenpin:U4|co1        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.515 ns                ;
+; N/A                                     ; 78.74 MHz ( period = 12.700 ns )                    ; rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[0] ; shukongfenpin:U4|co1        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.349 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.31 MHz ( period = 9.871 ns )                    ; dizhifasheng:U6|counter1[0]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 101.70 MHz ( period = 9.833 ns )                    ; dizhifasheng:U6|counter1[4]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 103.38 MHz ( period = 9.673 ns )                    ; xuanqu:U5|add[1]                                                                    ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.408 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 104.36 MHz ( period = 9.582 ns )                    ; dizhifasheng:U6|counter1[5]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 9.318 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 109.70 MHz ( period = 9.116 ns )                    ; xuanqu:U5|add[0]                                                                    ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.851 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 111.00 MHz ( period = 9.009 ns )                    ; dizhifasheng:U6|counter1[3]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.745 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 116.37 MHz ( period = 8.593 ns )                    ; dizhifasheng:U6|counter1[2]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 8.329 ns                ;
+; N/A                                     ; 129.17 MHz ( period = 7.742 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.486 ns                ;
+; N/A                                     ; 130.62 MHz ( period = 7.656 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 131.53 MHz ( period = 7.603 ns )                    ; dizhifasheng:U6|counter1[6]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.339 ns                ;
+; N/A                                     ; 132.10 MHz ( period = 7.570 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.314 ns                ;
+; N/A                                     ; 133.44 MHz ( period = 7.494 ns )                    ; xuanqu:U5|count2[9]                                                                 ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.238 ns                ;
+; N/A                                     ; 134.17 MHz ( period = 7.453 ns )                    ; xuanqu:U5|count1[14]                                                                ; xuanqu:U5|count1[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.189 ns                ;
+; N/A                                     ; 134.99 MHz ( period = 7.408 ns )                    ; xuanqu:U5|count2[9]                                                                 ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.152 ns                ;
+; N/A                                     ; 135.50 MHz ( period = 7.380 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[17]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.124 ns                ;
+; N/A                                     ; 135.74 MHz ( period = 7.367 ns )                    ; xuanqu:U5|count1[14]                                                                ; xuanqu:U5|count1[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.103 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[0] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[1] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[2] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[3] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[4] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[5] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[6] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[7] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[8] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 135.92 MHz ( period = 7.357 ns )                    ; dizhifasheng:U6|counter1[7]                                                         ; dizhifasheng:U6|counter1[9] ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.093 ns                ;
+; N/A                                     ; 136.57 MHz ( period = 7.322 ns )                    ; xuanqu:U5|count2[9]                                                                 ; xuanqu:U5|count2[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.066 ns                ;
+; N/A                                     ; 136.71 MHz ( period = 7.315 ns )                    ; xuanqu:U5|count2[8]                                                                 ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.059 ns                ;
+; N/A                                     ; 137.10 MHz ( period = 7.294 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[16]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.038 ns                ;
+; N/A                                     ; 137.19 MHz ( period = 7.289 ns )                    ; xuanqu:U5|count1[12]                                                                ; xuanqu:U5|count1[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.025 ns                ;
+; N/A                                     ; 137.34 MHz ( period = 7.281 ns )                    ; xuanqu:U5|count1[14]                                                                ; xuanqu:U5|count1[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 7.017 ns                ;
+; N/A                                     ; 137.74 MHz ( period = 7.260 ns )                    ; xuanqu:U5|count1[18]                                                                ; xuanqu:U5|count1[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.996 ns                ;
+; N/A                                     ; 137.80 MHz ( period = 7.257 ns )                    ; xuanqu:U5|count2[16]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.993 ns                ;
+; N/A                                     ; 138.33 MHz ( period = 7.229 ns )                    ; xuanqu:U5|count2[8]                                                                 ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.973 ns                ;
+; N/A                                     ; 138.39 MHz ( period = 7.226 ns )                    ; xuanqu:U5|count2[15]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.962 ns                ;
+; N/A                                     ; 138.73 MHz ( period = 7.208 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[15]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.952 ns                ;
+; N/A                                     ; 138.83 MHz ( period = 7.203 ns )                    ; xuanqu:U5|count1[12]                                                                ; xuanqu:U5|count1[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.939 ns                ;
+; N/A                                     ; 139.04 MHz ( period = 7.192 ns )                    ; xuanqu:U5|count2[6]                                                                 ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.936 ns                ;
+; N/A                                     ; 139.39 MHz ( period = 7.174 ns )                    ; xuanqu:U5|count1[18]                                                                ; xuanqu:U5|count1[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.910 ns                ;
+; N/A                                     ; 139.45 MHz ( period = 7.171 ns )                    ; xuanqu:U5|count2[16]                                                                ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.907 ns                ;
+; N/A                                     ; 139.53 MHz ( period = 7.167 ns )                    ; xuanqu:U5|count2[10]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.903 ns                ;
+; N/A                                     ; 140.00 MHz ( period = 7.143 ns )                    ; xuanqu:U5|count2[8]                                                                 ; xuanqu:U5|count2[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.06 MHz ( period = 7.140 ns )                    ; xuanqu:U5|count2[15]                                                                ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.876 ns                ;
+; N/A                                     ; 140.19 MHz ( period = 7.133 ns )                    ; xuanqu:U5|count2[20]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.869 ns                ;
+; N/A                                     ; 140.21 MHz ( period = 7.132 ns )                    ; xuanqu:U5|count2[9]                                                                 ; xuanqu:U5|count2[17]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.876 ns                ;
+; N/A                                     ; 140.41 MHz ( period = 7.122 ns )                    ; xuanqu:U5|count2[5]                                                                 ; xuanqu:U5|count2[14]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.866 ns                ;
+; N/A                                     ; 140.51 MHz ( period = 7.117 ns )                    ; xuanqu:U5|count1[12]                                                                ; xuanqu:U5|count1[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.853 ns                ;
+; N/A                                     ; 140.67 MHz ( period = 7.109 ns )                    ; xuanqu:U5|count1[13]                                                                ; xuanqu:U5|count1[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.845 ns                ;
+; N/A                                     ; 140.73 MHz ( period = 7.106 ns )                    ; xuanqu:U5|count2[6]                                                                 ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.850 ns                ;
+; N/A                                     ; 140.85 MHz ( period = 7.100 ns )                    ; xuanqu:U5|count2[17]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.836 ns                ;
+; N/A                                     ; 141.02 MHz ( period = 7.091 ns )                    ; xuanqu:U5|count1[14]                                                                ; xuanqu:U5|count1[17]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.827 ns                ;
+; N/A                                     ; 141.08 MHz ( period = 7.088 ns )                    ; xuanqu:U5|count1[18]                                                                ; xuanqu:U5|count1[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.824 ns                ;
+; N/A                                     ; 141.14 MHz ( period = 7.085 ns )                    ; xuanqu:U5|count2[16]                                                                ; xuanqu:U5|count2[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.821 ns                ;
+; N/A                                     ; 141.22 MHz ( period = 7.081 ns )                    ; xuanqu:U5|count2[10]                                                                ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.817 ns                ;
+; N/A                                     ; 141.36 MHz ( period = 7.074 ns )                    ; xuanqu:U5|count1[20]                                                                ; xuanqu:U5|count1[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.810 ns                ;
+; N/A                                     ; 141.50 MHz ( period = 7.067 ns )                    ; xuanqu:U5|count2[13]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.803 ns                ;
+; N/A                                     ; 141.76 MHz ( period = 7.054 ns )                    ; xuanqu:U5|count2[15]                                                                ; xuanqu:U5|count2[18]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.790 ns                ;
+; N/A                                     ; 141.90 MHz ( period = 7.047 ns )                    ; xuanqu:U5|count2[20]                                                                ; xuanqu:U5|count2[19]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.783 ns                ;
+; N/A                                     ; 141.92 MHz ( period = 7.046 ns )                    ; xuanqu:U5|count2[9]                                                                 ; xuanqu:U5|count2[16]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.790 ns                ;
+; N/A                                     ; 142.11 MHz ( period = 7.037 ns )                    ; xuanqu:U5|count2[12]                                                                ; xuanqu:U5|count2[20]        ; clk20mhz   ; clk20mhz ; None                        ; None                      ; 6.773 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                     ;                             ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------------------+-----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; tsu                                                                               ;
++-------+--------------+------------+------+-----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                          ; To Clock ;
++-------+--------------+------------+------+-----------------------------+----------+
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[9]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[5]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[8]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[7]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[6]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[4]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[3]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[2]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[1]         ; clk20mhz ;
+; N/A   ; None         ; 0.545 ns   ; f    ; xuanqu:U5|count2[0]         ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[17]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[15]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[18]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[20]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[19]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[11]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[16]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[14]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[12]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[13]        ; clk20mhz ;
+; N/A   ; None         ; 0.469 ns   ; e    ; xuanqu:U5|count1[10]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[15]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[16]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[20]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[17]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[18]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[19]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[10]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[13]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[12]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[14]        ; clk20mhz ;
+; N/A   ; None         ; 0.439 ns   ; f    ; xuanqu:U5|count2[11]        ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[9]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[7]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[5]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[6]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[8]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[4]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[3]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[2]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[1]         ; clk20mhz ;
+; N/A   ; None         ; 0.407 ns   ; e    ; xuanqu:U5|count1[0]         ; clk20mhz ;
+; N/A   ; None         ; 0.293 ns   ; f    ; xuanqu:U5|key_out2          ; clk20mhz ;
+; N/A   ; None         ; 0.140 ns   ; e    ; xuanqu:U5|key_out1          ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -0.324 ns  ; a[2] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -0.375 ns  ; a[1] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -0.628 ns  ; a[3] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -0.898 ns  ; a[0] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -2.074 ns  ; f    ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A   ; None         ; -2.190 ns  ; e    ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A   ; None         ; -2.342 ns  ; a[2] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A   ; None         ; -2.472 ns  ; a[1] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A   ; None         ; -2.638 ns  ; a[3] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A   ; None         ; -2.873 ns  ; a[2] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A   ; None         ; -2.912 ns  ; a[0] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A   ; None         ; -3.003 ns  ; a[1] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A   ; None         ; -3.169 ns  ; a[3] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A   ; None         ; -3.443 ns  ; a[0] ; xuanqu:U5|add[0]            ; clk20mhz ;
++-------+--------------+------------+------+-----------------------------+----------+
+
+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+----------------------+-----+------------+
+; Slack ; Required tco ; Actual tco ; From                 ; To  ; From Clock ;
++-------+--------------+------------+----------------------+-----+------------+
+; N/A   ; None         ; 9.868 ns   ; shukongfenpin:U4|co2 ; co3 ; clk20mhz   ;
++-------+--------------+------------+----------------------+-----+------------+
+
+
++-----------------------------------------------------------------------------------------+
+; th                                                                                      ;
++---------------+-------------+-----------+------+-----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                          ; To Clock ;
++---------------+-------------+-----------+------+-----------------------------+----------+
+; N/A           ; None        ; 4.009 ns  ; a[0] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A           ; None        ; 3.735 ns  ; a[3] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A           ; None        ; 3.709 ns  ; a[0] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A           ; None        ; 3.552 ns  ; a[2] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A           ; None        ; 3.495 ns  ; a[1] ; xuanqu:U5|add[1]            ; clk20mhz ;
+; N/A           ; None        ; 3.435 ns  ; a[3] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A           ; None        ; 3.269 ns  ; a[1] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A           ; None        ; 3.139 ns  ; a[2] ; xuanqu:U5|add[0]            ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 2.456 ns  ; e    ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 2.340 ns  ; f    ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 1.164 ns  ; a[0] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 0.894 ns  ; a[3] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 0.641 ns  ; a[1] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[0] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[1] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[2] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[3] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[4] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[5] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[6] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[7] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[8] ; clk20mhz ;
+; N/A           ; None        ; 0.590 ns  ; a[2] ; dizhifasheng:U6|counter1[9] ; clk20mhz ;
+; N/A           ; None        ; 0.126 ns  ; e    ; xuanqu:U5|key_out1          ; clk20mhz ;
+; N/A           ; None        ; -0.027 ns ; f    ; xuanqu:U5|key_out2          ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[9]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[7]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[5]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[6]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[8]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[4]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[3]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[2]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[1]         ; clk20mhz ;
+; N/A           ; None        ; -0.141 ns ; e    ; xuanqu:U5|count1[0]         ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[15]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[16]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[20]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[17]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[18]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[19]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[10]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[13]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[12]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[14]        ; clk20mhz ;
+; N/A           ; None        ; -0.173 ns ; f    ; xuanqu:U5|count2[11]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[17]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[15]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[18]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[20]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[19]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[11]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[16]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[14]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[12]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[13]        ; clk20mhz ;
+; N/A           ; None        ; -0.203 ns ; e    ; xuanqu:U5|count1[10]        ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[9]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[5]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[8]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[7]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[6]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[4]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[3]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[2]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[1]         ; clk20mhz ;
+; N/A           ; None        ; -0.279 ns ; f    ; xuanqu:U5|count2[0]         ; clk20mhz ;
++---------------+-------------+-----------+------+-----------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sun Nov 14 14:49:11 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off top -c top --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 6 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk20mhz" is an undefined clock
+Warning: Found 5 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "shukongfenpin:U4|co1" as buffer
+    Info: Detected ripple clock "xuanqu:U5|key_out1" as buffer
+    Info: Detected ripple clock "xuanqu:U5|key_out2" as buffer
+    Info: Detected ripple clock "m8hz:U1|co1" as buffer
+    Info: Detected ripple clock "m8hz:U1|co2" as buffer
+Info: Clock "clk20mhz" has Internal fmax of 66.92 MHz between source memory "rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1]" and destination register "shukongfenpin:U4|q1[14]" (period= 14.943 ns)
+    Info: + Longest memory to register delay is 9.611 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.109 ns) = 0.109 ns; Loc. = M4K_X23_Y8; Fanout = 16; MEM Node = 'rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1]'
+        Info: 2: + IC(1.552 ns) + CELL(0.651 ns) = 2.312 ns; Loc. = LCCOMB_X26_Y9_N14; Fanout = 2; COMB Node = 'fanyi:U3|Mux15~0'
+        Info: 3: + IC(0.599 ns) + CELL(0.596 ns) = 3.507 ns; Loc. = LCCOMB_X25_Y9_N0; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~1'
+        Info: 4: + IC(0.000 ns) + CELL(0.086 ns) = 3.593 ns; Loc. = LCCOMB_X25_Y9_N2; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~3'
+        Info: 5: + IC(0.000 ns) + CELL(0.086 ns) = 3.679 ns; Loc. = LCCOMB_X25_Y9_N4; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~5'
+        Info: 6: + IC(0.000 ns) + CELL(0.086 ns) = 3.765 ns; Loc. = LCCOMB_X25_Y9_N6; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~7'
+        Info: 7: + IC(0.000 ns) + CELL(0.086 ns) = 3.851 ns; Loc. = LCCOMB_X25_Y9_N8; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~9'
+        Info: 8: + IC(0.000 ns) + CELL(0.086 ns) = 3.937 ns; Loc. = LCCOMB_X25_Y9_N10; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~11'
+        Info: 9: + IC(0.000 ns) + CELL(0.086 ns) = 4.023 ns; Loc. = LCCOMB_X25_Y9_N12; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~13'
+        Info: 10: + IC(0.000 ns) + CELL(0.190 ns) = 4.213 ns; Loc. = LCCOMB_X25_Y9_N14; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~15'
+        Info: 11: + IC(0.000 ns) + CELL(0.086 ns) = 4.299 ns; Loc. = LCCOMB_X25_Y9_N16; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~17'
+        Info: 12: + IC(0.000 ns) + CELL(0.086 ns) = 4.385 ns; Loc. = LCCOMB_X25_Y9_N18; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~19'
+        Info: 13: + IC(0.000 ns) + CELL(0.086 ns) = 4.471 ns; Loc. = LCCOMB_X25_Y9_N20; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~21'
+        Info: 14: + IC(0.000 ns) + CELL(0.086 ns) = 4.557 ns; Loc. = LCCOMB_X25_Y9_N22; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~23'
+        Info: 15: + IC(0.000 ns) + CELL(0.086 ns) = 4.643 ns; Loc. = LCCOMB_X25_Y9_N24; Fanout = 2; COMB Node = 'shukongfenpin:U4|Add0~25'
+        Info: 16: + IC(0.000 ns) + CELL(0.506 ns) = 5.149 ns; Loc. = LCCOMB_X25_Y9_N26; Fanout = 1; COMB Node = 'shukongfenpin:U4|Add0~26'
+        Info: 17: + IC(1.079 ns) + CELL(0.370 ns) = 6.598 ns; Loc. = LCCOMB_X25_Y10_N14; Fanout = 1; COMB Node = 'shukongfenpin:U4|Equal0~3'
+        Info: 18: + IC(0.374 ns) + CELL(0.370 ns) = 7.342 ns; Loc. = LCCOMB_X25_Y10_N12; Fanout = 1; COMB Node = 'shukongfenpin:U4|Equal0~4'
+        Info: 19: + IC(0.361 ns) + CELL(0.206 ns) = 7.909 ns; Loc. = LCCOMB_X25_Y10_N18; Fanout = 17; COMB Node = 'shukongfenpin:U4|Equal0~10'
+        Info: 20: + IC(1.042 ns) + CELL(0.660 ns) = 9.611 ns; Loc. = LCFF_X25_Y8_N29; Fanout = 3; REG Node = 'shukongfenpin:U4|q1[14]'
+        Info: Total cell delay = 4.604 ns ( 47.90 % )
+        Info: Total interconnect delay = 5.007 ns ( 52.10 % )
+    Info: - Smallest clock skew is -5.112 ns
+        Info: + Shortest clock path from clock "clk20mhz" to destination register is 2.751 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 5; CLK Node = 'clk20mhz'
+            Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 81; COMB Node = 'clk20mhz~clkctrl'
+            Info: 3: + IC(0.842 ns) + CELL(0.666 ns) = 2.751 ns; Loc. = LCFF_X25_Y8_N29; Fanout = 3; REG Node = 'shukongfenpin:U4|q1[14]'
+            Info: Total cell delay = 1.766 ns ( 64.19 % )
+            Info: Total interconnect delay = 0.985 ns ( 35.81 % )
+        Info: - Longest clock path from clock "clk20mhz" to source memory is 7.863 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 5; CLK Node = 'clk20mhz'
+            Info: 2: + IC(1.305 ns) + CELL(0.970 ns) = 3.375 ns; Loc. = LCFF_X2_Y2_N9; Fanout = 1; REG Node = 'm8hz:U1|co1'
+            Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.731 ns; Loc. = LCFF_X2_Y2_N17; Fanout = 2; REG Node = 'm8hz:U1|co2'
+            Info: 4: + IC(1.547 ns) + CELL(0.000 ns) = 6.278 ns; Loc. = CLKCTRL_G1; Fanout = 26; COMB Node = 'm8hz:U1|co2~clkctrl'
+            Info: 5: + IC(0.770 ns) + CELL(0.815 ns) = 7.863 ns; Loc. = M4K_X23_Y8; Fanout = 16; MEM Node = 'rom_jianpu:U2|altsyncram:altsyncram_component|altsyncram_ii71:auto_generated|q_a[1]'
+            Info: Total cell delay = 3.855 ns ( 49.03 % )
+            Info: Total interconnect delay = 4.008 ns ( 50.97 % )
+    Info: + Micro clock to output delay of source is 0.260 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "xuanqu:U5|count2[9]" (data pin = "f", clock pin = "clk20mhz") is 0.545 ns
+    Info: + Longest pin to register delay is 3.303 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_22; Fanout = 23; PIN Node = 'f'
+        Info: 2: + IC(1.543 ns) + CELL(0.660 ns) = 3.303 ns; Loc. = LCFF_X8_Y7_N31; Fanout = 4; REG Node = 'xuanqu:U5|count2[9]'
+        Info: Total cell delay = 1.760 ns ( 53.28 % )
+        Info: Total interconnect delay = 1.543 ns ( 46.72 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "clk20mhz" to destination register is 2.718 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 5; CLK Node = 'clk20mhz'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 81; COMB Node = 'clk20mhz~clkctrl'
+        Info: 3: + IC(0.809 ns) + CELL(0.666 ns) = 2.718 ns; Loc. = LCFF_X8_Y7_N31; Fanout = 4; REG Node = 'xuanqu:U5|count2[9]'
+        Info: Total cell delay = 1.766 ns ( 64.97 % )
+        Info: Total interconnect delay = 0.952 ns ( 35.03 % )
+Info: tco from clock "clk20mhz" to destination pin "co3" through register "shukongfenpin:U4|co2" is 9.868 ns
+    Info: + Longest clock path from clock "clk20mhz" to source register is 5.087 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 5; CLK Node = 'clk20mhz'
+        Info: 2: + IC(1.966 ns) + CELL(0.970 ns) = 4.036 ns; Loc. = LCFF_X25_Y10_N25; Fanout = 1; REG Node = 'shukongfenpin:U4|co1'
+        Info: 3: + IC(0.385 ns) + CELL(0.666 ns) = 5.087 ns; Loc. = LCFF_X25_Y10_N27; Fanout = 2; REG Node = 'shukongfenpin:U4|co2'
+        Info: Total cell delay = 2.736 ns ( 53.78 % )
+        Info: Total interconnect delay = 2.351 ns ( 46.22 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 4.477 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X25_Y10_N27; Fanout = 2; REG Node = 'shukongfenpin:U4|co2'
+        Info: 2: + IC(1.421 ns) + CELL(3.056 ns) = 4.477 ns; Loc. = PIN_93; Fanout = 0; PIN Node = 'co3'
+        Info: Total cell delay = 3.056 ns ( 68.26 % )
+        Info: Total interconnect delay = 1.421 ns ( 31.74 % )
+Info: th for register "xuanqu:U5|add[1]" (data pin = "a[0]", clock pin = "clk20mhz") is 4.009 ns
+    Info: + Longest clock path from clock "clk20mhz" to destination register is 7.783 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 5; CLK Node = 'clk20mhz'
+        Info: 2: + IC(1.305 ns) + CELL(0.970 ns) = 3.375 ns; Loc. = LCFF_X2_Y2_N9; Fanout = 1; REG Node = 'm8hz:U1|co1'
+        Info: 3: + IC(0.386 ns) + CELL(0.970 ns) = 4.731 ns; Loc. = LCFF_X2_Y2_N17; Fanout = 2; REG Node = 'm8hz:U1|co2'
+        Info: 4: + IC(1.547 ns) + CELL(0.000 ns) = 6.278 ns; Loc. = CLKCTRL_G1; Fanout = 26; COMB Node = 'm8hz:U1|co2~clkctrl'
+        Info: 5: + IC(0.839 ns) + CELL(0.666 ns) = 7.783 ns; Loc. = LCFF_X21_Y8_N25; Fanout = 7; REG Node = 'xuanqu:U5|add[1]'
+        Info: Total cell delay = 3.706 ns ( 47.62 % )
+        Info: Total interconnect delay = 4.077 ns ( 52.38 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 4.080 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.110 ns) = 1.110 ns; Loc. = PIN_88; Fanout = 3; PIN Node = 'a[0]'
+        Info: 2: + IC(0.491 ns) + CELL(0.206 ns) = 1.807 ns; Loc. = LCCOMB_X27_Y7_N22; Fanout = 1; COMB Node = 'xuanqu:U5|add1~5'
+        Info: 3: + IC(1.795 ns) + CELL(0.370 ns) = 3.972 ns; Loc. = LCCOMB_X21_Y8_N24; Fanout = 1; COMB Node = 'xuanqu:U5|Add8~1'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 4.080 ns; Loc. = LCFF_X21_Y8_N25; Fanout = 7; REG Node = 'xuanqu:U5|add[1]'
+        Info: Total cell delay = 1.794 ns ( 43.97 % )
+        Info: Total interconnect delay = 2.286 ns ( 56.03 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 191 megabytes
+    Info: Processing ended: Sun Nov 14 14:49:11 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

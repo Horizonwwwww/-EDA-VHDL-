@@ -1,0 +1,28 @@
+|m8hz
+clk => q1[22].CLK
+clk => q1[21].CLK
+clk => q1[20].CLK
+clk => q1[19].CLK
+clk => q1[18].CLK
+clk => q1[17].CLK
+clk => q1[16].CLK
+clk => q1[15].CLK
+clk => q1[14].CLK
+clk => q1[13].CLK
+clk => q1[12].CLK
+clk => q1[11].CLK
+clk => q1[10].CLK
+clk => q1[9].CLK
+clk => q1[8].CLK
+clk => q1[7].CLK
+clk => q1[6].CLK
+clk => q1[5].CLK
+clk => q1[4].CLK
+clk => q1[3].CLK
+clk => q1[2].CLK
+clk => q1[1].CLK
+clk => q1[0].CLK
+clk => co1.CLK
+c <= co2.DB_MAX_OUTPUT_PORT_TYPE
+
+
